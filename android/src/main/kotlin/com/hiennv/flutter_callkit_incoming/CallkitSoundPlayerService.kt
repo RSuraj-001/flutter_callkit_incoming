@@ -10,7 +10,7 @@ import android.media.RingtoneManager
 import android.net.Uri
 import android.os.*
 import android.text.TextUtils
-import android.util.Log
+// import android.util.Log
 
 class CallkitSoundPlayerService : Service() {
 
@@ -75,7 +75,7 @@ class CallkitSoundPlayerService : Service() {
     }
 
     private fun playSound(intent: Intent?) {
-        Log.d("**********************8Play Sound Called")
+        // Log.d("**********************8Play Sound Called")
         this.data = intent?.extras
         val sound = this.data?.getString(
             CallkitConstants.EXTRA_CALLKIT_RINGTONE_PATH,
@@ -95,7 +95,7 @@ class CallkitSoundPlayerService : Service() {
                 uri = getRingtoneUri("ringtone_default")
                 mediaPlayer(uri!!)
             } catch (e2: Exception) {
-                Log.d("********Entered First Try Catch")
+                // Log.d("********Entered First Try Catch")
                 e2.printStackTrace()
             }
         }
