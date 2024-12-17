@@ -100,7 +100,7 @@ class CallkitSoundPlayerService : Service() {
 
     private fun mediaPlayer(uri: Uri) {
         mediaPlayer = MediaPlayer()
-        mediaPlayer.reset()
+        mediaPlayer?.reset()
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
             val attribution = AudioAttributes.Builder()
                 .setContentType(AudioAttributes.CONTENT_TYPE_SONIFICATION)
